@@ -41,7 +41,7 @@ This project is licensed under the MIT License. Feel free to contribute and impr
 Pull requests are welcome! For major changes, please open an issue first to discuss the changes.
 
 ## 📬 Contact
-For any queries, reach out at **your-email@example.com**
+For any queries, reach out at **ayushkumarkarmi30@gmail.com**
 
 Happy Scraping! 🚀
 

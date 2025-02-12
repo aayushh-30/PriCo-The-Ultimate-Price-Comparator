@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PriCo by Ayush</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        .container { width: 80%; margin: auto; }
+        .product { border: 1px solid #ddd; padding: 15px; margin: 10px 0; border-radius: 5px; }
+        .product img { max-width: 100px; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Results for "{{ search_query }}"</h1>
+
+        <h2>Flipkart Results</h2>
+        {% for product in flipkart_products %}
+            <div class="product">
+                <img src="{{ product.3 }}" alt="Product Image">
+                <h3>{{ product.0 }}</h3>
+                <p><strong>Price:</strong> {{ product.1 }}</p>
+                <p><strong>Rating:</strong> {{ product.2 }}</p>
+                <a href="{{ product.4 }}" target="_blank">View on Flipkart</a>
+            </div>
+        {% empty %}
+            <p>No results found on Flipkart.</p>
+        {% endfor %}
+
+        <h2>Amazon Results</h2>
+        {% for product in amazon_products %}
+            <div class="product">
+                <img src="{{ product.3 }}" alt="Product Image">
+                <h3>{{ product.0 }}</h3>
+                <p><strong>Price:</strong> {{ product.1 }}</p>
+                <p><strong>Rating:</strong> {{ product.2 }}</p>
+                <a href="{{ product.4 }}" target="_blank">View on Amazon</a>
+            </div>
+        {% empty %}
+            <p>No results found on Amazon.</p>
+        {% endfor %}
+    </div>
+</body>
+</html>
